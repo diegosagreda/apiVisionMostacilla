@@ -26,7 +26,7 @@ const productoSchema = mongoose.Schema({
         required: true
     },
     destacado:{
-        type:Boolean,
+        type:Number,
         required: true
     }
 });
