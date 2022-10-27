@@ -24,6 +24,10 @@ const productoSchema = mongoose.Schema({
     cantidad:{
         type: Number,
         required: true
+    },
+    destacado:{
+        type:Boolean,
+        required: true
     }
 });
 
