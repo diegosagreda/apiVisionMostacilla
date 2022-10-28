@@ -27,6 +27,10 @@ const productoSchema = mongoose.Schema({
     },
     destacado:{
         type:Boolean,
+    },
+    categoria:{
+        type:String,
+        required: true
     }
 });
 
