@@ -29,7 +29,7 @@ router.get('/productos/:id', (req, res)=>{
 //update user
 router.put('/productos/:id', (req, res)=>{
     const {id} = req.params;
-    const {imagen,nombre,descripcion,caracteristicas,precio,cantidad,destacado} = req.body;
+    const {imagen,nombre,descripcion,caracteristicas,precio,cantidad,destacado,categoria} = req.body;
 
     productoSchema
         .updateOne({_id:id},{$set:{imagen,nombre,descripcion,caracteristicas,precio,cantidad,destacado,categoria}})
