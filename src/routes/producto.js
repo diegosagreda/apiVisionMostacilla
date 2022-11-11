@@ -18,7 +18,7 @@ router.get('/productos', (req, res)=>{
        .catch(err=> res.status(400).json({message:err }));
 })
 
-//get single user
+//get producto
 router.get('/productos/:id', (req, res)=>{
     const {id} = req.params;
     productoSchema
@@ -26,7 +26,7 @@ router.get('/productos/:id', (req, res)=>{
        .then(data=> res.json(data))
        .catch(err=> res.status(400).json({message:err }));
 })
-//update user
+//update productos
 router.put('/productos/:id', (req, res)=>{
     const {id} = req.params;
     const {imagen,nombre,descripcion,caracteristicas,precio,cantidad,destacado,categoria} = req.body;
@@ -39,7 +39,7 @@ router.put('/productos/:id', (req, res)=>{
 })
 
 
-//delete user
+//delete producto
 router.delete('/productos/:id', (req, res)=> {
     const {id} = req.params;
     productoSchema.findByIdAndRemove(id)

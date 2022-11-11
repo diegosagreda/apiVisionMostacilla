@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 const ventaSchema = mongoose.Schema(
     {
-     producto:{
-        type: String,
+     productos:{         
+        type: [],
         required:true
      },
      valor:{
