@@ -5,6 +5,7 @@ const userRoutes = require("./routes/user");
 const productosRoutes = require("./routes/producto");
 const ventasRoutes = require('./routes/ventas')
 const categoriasRoutes = require('./routes/categoria.routes')
+const empleadosRoutes = require('./routes/empleado.routes')
 const cors = require('cors')
 const app = express();
 const port = process.env.PORT || 9000;
@@ -16,6 +17,7 @@ app.use('/api',userRoutes);
 app.use('/api',productosRoutes);
 app.use('/api',ventasRoutes);
 app.use('/api',categoriasRoutes)
+app.use('/api/',empleadosRoutes)
 
 
 //routes
