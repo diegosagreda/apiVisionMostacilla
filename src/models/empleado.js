@@ -9,14 +9,18 @@ const empleadoSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    edad:{
+    email:{
         type: Number,
         required: true
     },
-    email:{
+    telefono:{
+        type: String,
+        require:true
+    },
+    direccion:{
         type: String,
         require:true
     }
 });
 
-module.exports = mongoose.model('user',empleadoSchema);
+module.exports = mongoose.model('empleado',empleadoSchema);

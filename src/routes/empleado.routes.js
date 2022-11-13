@@ -29,10 +29,10 @@ router.get('/empleados/:id', (req, res)=>{
 //update empleado
 router.put('/empleados/:id', (req, res)=>{
     const {id} = req.params;
-    const {cedula,nombre,edad,email} = req.body;
+    const {cedula,nombre,email,telefono, direccion} = req.body;
 
     empleadoSchema
-        .updateOne({_id:id},{$set:{cedula,nombre,edad,email}})
+        .updateOne({_id:id},{$set:{cedula,nombre,email,telefono, direccion}})
         .then((data)=>res.json(data))
         .catch(err=>res.status(400).json({message:err }));
 })
